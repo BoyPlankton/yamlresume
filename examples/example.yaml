@@ -1,0 +1,121 @@
+basics:
+  name: John Doe
+  label: Security Engineer
+  email: john.doe@example.com
+  phone: (912) 555-4321
+  url: https://johndoe.com
+  summary: Highly motivated and results-oriented Computer Security Engineer with 12+ years of experience in safeguarding IT infrastructure. Proven ability to identify, analyze, and mitigate security risks, develop and implement security policies, and conduct vulnerability assessments and penetration testing. Strong understanding of security best practices and emerging cyber threats. Excellent communication and collaboration skills.
+  location:
+    address: 2712 Broadway St
+    postalCode: 94155
+    city: San Francisco
+    countryCode: US
+    region: CA
+  profiles:
+    - network: Twitter
+      username: john
+      url: https://twitter.com/john
+work:
+  - name: ABC Company
+    position: Senior Security Engineer
+    url: https://abccompany.com
+    startDate: 2020-01-01
+    summary: Description ...
+    highlights:
+      - Led vulnerability assessment and penetration testing (VAPT) engagements for critical infrastructure, identifying and remediating high-risk vulnerabilities.
+      - Developed and implemented comprehensive security policies and procedures to enhance overall security posture.
+      - Designed and deployed security controls such as firewalls, intrusion detection/prevention systems (IDS/IPS), and endpoint security solutions.
+      - Conducted ongoing threat intelligence monitoring and analysis to stay abreast of emerging threats and implement preventative measures.
+      - Managed and responded to security incidents, performing root cause analysis, containment, and eradication.
+      - Collaborated with cross-functional teams (IT Operations, Development) to ensure security best practices are integrated into processes.
+  - name: DEF Company
+    position: Security Engineer
+    url: https://defcompany.com
+    startDate: 2015-01-01
+    endDate: 2020-01-01
+    summary: Description ...
+    highlights:
+      - Conducted vulnerability assessments and penetration testing for internal applications and systems.
+      - Supported incident response activities, including investigation, containment, and recovery.
+      - Monitored network activity for suspicious behavior and maintained security information and event management (SIEM) systems.
+      - Provided security awareness training to employees on various cybersecurity topics.
+      - Maintained and updated security documentation including security policies, procedures, and incident response plans.
+volunteer:
+  - organization: Organization
+    position: Volunteer
+    url: https://organization.com/
+    startDate: 2012-01-01
+    endDate: 2013-01-01
+    summary: Description ...
+    highlights:
+      - Awarded volunteer of the month.
+education:
+  - institution: XYZ University
+    url: https://xyzuniversity.edu/
+    area: Computer Science (Security Concentration)
+    studyType: Bachelor of Science
+    graduationDate: 2015-01-01
+    score: 4.0
+awards:
+  - title: Cybersecurity Excellence Award - Cloud Security
+    date: 2023-11-01
+    awarder: Cyber Defense Magazine
+    summary: This award recognizes John Doe's outstanding contributions in securing cloud environments.
+  - title: Runner-Up - Best Internal Penetration Test Report
+    date: 2022-11-01
+    awarder: ABC Company Internal Security Committee
+    summary: This award highlights John Doe's exceptional skills in identifying and documenting vulnerabilities within an internal network.
+certificates:
+  - name: Certified Ethical Cloud Security Specialist (CECSS)
+    issueDate: 2022-08-01
+    expireDate: 2025-08-01
+    certificateID: CSPA-CECSS-12345)
+    issuer: Cyber Security Professionals Association (CSPA)
+    url: https://certificate.com
+  - name: Advanced Threat Detection and Analysis (ATDA)
+    issueDate: 2021-05-01
+    expireDate: 2024-05-01
+    certificateID: ICR-ATDA-54321)
+    issuer: Institute for Cybercrime Research (ICR)
+    url: https://certificate.com
+publications:
+  - name: Publication
+    publisher: Company
+    releaseDate: 2014-10-01
+    url: https://publication.com
+    summary: Description ...
+skills:
+  - name: Network Security
+    level: Master
+    keywords:
+      - Firewalls
+      - IDS/IPS
+  - name: Security Information and Event Management
+    level: Master
+    keywords:
+      - Splunk
+  - name: Cloud Security
+    level: Master
+    keywords:
+      - AWS
+      - Azure
+      - GCP
+languages:
+  - language: English
+    fluency: Native Speaker
+interests:
+  - name: Wildlife
+    keywords:
+      - Ferrets
+      - Unicorns
+references:
+  - name: Jane Doe
+    reference: Reference ...
+projects:
+  - name: Project
+    startDate: 2019-01-01
+    endDate: 2021-01-01
+    description: Description ...
+    highlights:
+      - Won award at AIHacks 2016
+    url: https://project.com

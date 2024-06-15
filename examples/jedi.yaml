@@ -1,0 +1,75 @@
+basics:
+  name: Serra Antilles
+  label: Guardian of Peace and Justice
+  email: serra.antilles@example.com
+  phone: (555) 555-4321
+  url: https://example.com
+  summary: Highly skilled Jedi Knight with 9 years of experience protecting the galaxy and upholding the Jedi Code. Extensive training in lightsaber combat, Force manipulation, diplomacy, and battlefield tactics. Proven leadership and mentorship abilities. Adept at resolving conflicts peacefully, but prepared to defend the innocent when necessary.
+  location:
+    address: 456 Serenity Lane
+    postalCode: 94155
+    city: Tython
+    countryCode: Old Republic
+work:
+  - name: Jedi Knights of the Old Republic
+    position: Jedi Knight
+    url: https://example.com
+    startDate: 2020-01-01
+    summary: Description ...
+    highlights:
+      - Maintained peace and order throughout the galaxy, investigating threats and mediating disputes.
+      - Led humanitarian missions to war-torn planets, providing aid and rebuilding efforts.
+      - Trained Padawan learner in the ways of the Force and lightsaber combat.
+      - Successfully defended a vital Republic outpost against overwhelming Separatist forces during the battle of Eriadu.
+      - Utilized strategic use of the Force to break a droid blockade, allowing Republic reinforcements to reach the besieged city during the siege of Dantooine.
+      - Defeated a contingent of elite droid commandos, preventing the destruction of a vital communications relay during the skirmish on Bord Dxun.
+  - name: Jedi Knights of the Old Republic
+    position: Padawan Learner
+    url: https://example.com
+    startDate: 2015-01-01
+    endDate: 2020-01-01
+    summary: Description ...
+    highlights:
+      - Trained under Jedi Master Jinn Alaris, mastering lightsaber combat forms and developing a deep understanding of the Force.
+      - Assisted Master in diplomatic missions and conflict resolution efforts.
+      - Gained experience on peacekeeping missions throughout the Outer Rim.
+education:
+  - institution: Jedi Academy
+    url: https://example.edu
+    studyType: Jedi Training
+    area: Jedi Diplomacy & Galactic Affairs
+    graduationDate: 2015-01-01
+awards:
+  - title: Medal of Bravery (Battle of Eriadu)
+    date: 2023-11-01
+    awarder: Knights of the Old Republic
+    summary: Awarded for Serra's heroism and tactical brilliance during the Battle of Eriadu.
+  - title: Order of the Citadel (Siege of Dantooine)
+    date: 2022-11-01
+    awarder: Knights of the Old Republic
+    summary: This award is bestowed upon Jedi who play a pivotal role in defending a Jedi Temple or sacred location.
+skills:
+  - name: Lightsaber Combat
+    level: Forms I-VII
+  - name: Force Healing
+    level: Basic
+    keywords:
+      - Wound Treatment
+      - Disease Cure
+  - name: Starship Piloting
+    level: Basic
+    keywords:
+      - Starfighter
+      - Freighter
+  - name: Mechanics
+    level: Basic
+    keywords:
+      - Droid Repair
+      - Starship Maintenance
+languages:
+  - language: Basic
+    fluency: Native Speaker
+  - language: Huttese
+    fluency: Conversational
+  - language: Binary
+    fluency: Functional

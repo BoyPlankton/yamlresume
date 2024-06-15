@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+    <title>{{.Basics.Name}}</title>
+
+    <style type="text/css">
+      body {
+        background: #EEEEEE;
+        font: 12px "Times New Roman", Times, sans-serif;
+        line-height: 1.4;
+        margin: 40px 0;
+      }
+      em {
+        color: #999;
+      }
+      p {
+        line-height: 1.4;
+      }
+      ul {
+        margin-bottom: 0;
+      }
+      li {
+        margin-bottom: 2px;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 80px 100px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 4px #aaa;
+        -webkit-box-shadow: 2px 2px 4px #aaa;
+      }
+
+      .coursesList {
+        width: 28%;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .largeFont {
+        font-size: 20px;
+      }
+
+      .smallFont {
+        font-size: 12px;
+      }
+
+      .sectionBlock {
+        display: flex;
+        width: 100%;
+      }
+
+      .sectionName {
+        width: 18%;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .sectionContent {
+        width: 80%;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .sectionContent ul {
+        padding-left: 20px;
+        margin-top: 6px;
+        list-style-type: circle;
+      }
+
+      .sectionContent .title {
+        font-weight: bold;
+      }
+
+      .sectionContent .date {
+        float: right;
+      }
+
+      .sectionContent .separator {
+        height: 14px;
+      }
+
+      .sectionLine {
+        border-style: dashed;
+        border-width: 1px;
+        border-color: #CFCFCF;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .divider {
+        font-weight: bold;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .summary {
+        margin-top: 6px;
+      }
+
+      .skillBlock {
+        margin-bottom: 4px;
+      }
+
+      .jobBlock {
+        page-break-inside: avoid;
+      }
+
+      /* Media Queries */
+      @media only screen and (max-width: 40em) {
+        body {
+          margin: 0;
+          font-size: 14px;
+        }
+        #resume {
+          margin: 0 auto;
+          max-width: 600px;
+          padding: 0.5em 1em;
+          border: none;
+        }
+        .sectionContent {
+          width: 100%;
+        }
+        .sectionContent .date {
+          padding-right: 2em;
+        }
+        .sectionName {
+          width: auto;
+        }
+        .largeFont {
+          font-size: 20px;
+        }
+        .smallFont {
+          font-size: 14px;
+        }
+      }
+
+      @media print {
+        #resume {
+          margin: 0 auto;
+          max-width: 600px;
+          padding: 0px 0px;
+          border: 0px;
+          background: #fff;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+        }
+
+        a {
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id='resume'>
+      <div id='nameBlock' class='largeFont'>
+        <span class='name'>{{.Basics.Name}},</span>
+        <span class='label'>{{.Basics.Label}}</span>
+      </div>
+      <div id='basicsBlock' class='smallFont'>
+        <div class='contactBlock'>
+          <span class='email'>{{.Basics.Email}}</span>
+          <span class='divider'>|</span>
+          <span class='address'>{{.Basics.Location.City}},{{.Basics.Location.CountryCode}}</span>
+        </div>
+        <div id='profilesBlock'>
+          {{range .Basics.Profiles}}
+          <span class='url'><a href='{{.URL}}'>{{.URL}}</a></span>
+          <span class='divider'>|</span> 
+          {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{if .Basics.Summary}}
+      <div id='summaryBlock' class="sectionBlock">
+        <div class='sectionName'><span>SUMMARY</span></div>
+        <div class='sectionContent'><span>{{.Basics.Summary}}</span></div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Accomplishments}}
+      <div id='accomplishments' class="sectionBlock">
+        <div class='sectionName'><span>SUMMARY</span></div>
+        <div class='sectionContent'>
+          <div class='accomplishmentBlock'>
+            {{range .Accomplishments}}
+            <div class=''>{{.}}</div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      <div id='workBlock' class="sectionBlock">
+        <div class='sectionName'><span>EXPERIENCE</span></div>
+        <div class='sectionContent'>
+        {{range .Works}}
+          <div class="jobBlock">
+            <div class='blockHeader'>
+              <span class='title'>{{.Name}},{{.Position}}</span>
+              <span class='date'>{{.StartDate.Format "2006-01-02"}} &#8212; {{if not .EndDate.IsZero}}{{.EndDate.Format "2006-01-02"}}{{else}}Present{{end}}</span>
+            </div>
+            <div><a href='{{.URL}}'>{{.URL}}</a></div>
+            <ul class='highlights'>
+              {{range .Highlights}}
+              <li>{{.}}</li>
+              {{end}}
+            </ul>
+            <div class='separator'></div>
+          </div>
+        {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{if .Awards}}
+      <div id='awards' class="sectionBlock">
+        <div class='sectionName'><span>AWARDS</span></div>
+        <div class='sectionContent'>
+        {{range .Awards}}
+          <div class='blockHeader'><span class='title'>{{.Title}}</span><span class='date'>{{.Date.Format "2006-01-02"}}</span></div>
+          <div class=''>{{.Awarder}}</div>
+        {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Educations}}
+      <div id='education' class="sectionBlock">
+        <div class='sectionName'><span>EDUCATION</span></div>
+        <div class='sectionContent'>
+        {{range .Educations}}
+          <div class='educationBlock'>
+            <span class='title'>{{.Institution}}</span> {{if .GraduationDate}} <span class='date'>{{.GraduationDate.Format "2006-01-02"}}</span> {{end}}
+            <div class=''>{{.StudyType}}, {{.Area}}</div>
+          </div>
+        {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Skills}}
+      <div id='skills' class="sectionBlock">
+        <div class='sectionName'><span>SKILLS</span></div>
+        <div class='sectionContent'>
+          {{range .Skills}}
+          <div class='skillBlock'>
+            {{if .Keywords}}
+            <span class='title'>{{.Name}} <em>({{.Level}})</em>:</span> 
+            {{$n := len .Keywords}} 
+            {{range $i, $e := .Keywords}}
+            {{if ne (inc $i) $n}}
+            <span>{{.}}</span>, 
+            {{else}}
+            <span>{{.}}</span>
+            {{end}}
+            {{end}}
+            {{else}} 
+            <span class='title'>{{.Name}} <em>({{.Level}})</em></span>
+            {{end}}
+          </div>
+        {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Languages}}
+      <div id='languages' class="sectionBlock">
+        <div class='sectionName'><span>LANGUAGES</span></div>
+        <div class='sectionContent'>
+          {{range .Languages}}
+          <div class='languageBlock'>
+            <span class='title'>{{.Language}}<em>({{.Fluency}})</em></span>
+          </div>
+          {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Certificates}}
+      <div id='certificates' class="sectionBlock">
+        <div class='sectionName'><span>CERTIFICATES</span></div>
+        <div class='sectionContent'>
+          {{range .Certificates}}
+          <div class='blockHeader'>
+            <span class='title'>{{.Name}}</span><span class='date'>{{.IssueDate.Format "2006-01-02"}} &#8212;{{.ExpireDate.Format "2006-01-02"}}</span>
+            <div class=''>{{.Issuer}}</div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      {{end}}
+      {{if .Interests}}
+      <div id='interests' class="sectionBlock">
+        <div class='sectionName'><span>INTERESTS</span></div>
+        <div class='sectionContent'>
+          {{range .Interests}} 
+          <span class='name'>{{.Name}}</span> 
+          {{end}}
+        </div>
+        <div class='sectionLine'></div>
+      </div>
+      {{end}}
+    </div>
+  </body>
+</html>
